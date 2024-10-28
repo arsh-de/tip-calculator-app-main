@@ -32,7 +32,7 @@ body {
     font-weight: 600;
     letter-spacing: 1rem;
     line-height: 2.5rem;
-    margin: 2rem 0rem;
+    margin-bottom: 4rem;
     font-size: 1.5rem;
 }
 
@@ -41,7 +41,7 @@ body {
     width: 100%;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
-    padding: 2rem 1.5rem;
+    padding: 2.5rem;
     display: flex;
     flex-direction: column;
 }
@@ -140,11 +140,11 @@ body {
 
 .total-tip {
     color: var(--Strong-cyan);
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 .tip-amount-person {
-    font-size: 2rem;
+    font-size: 3rem;
     color: var(--Strong-cyan);
 }
 
@@ -188,6 +188,11 @@ body {
     outline: 3px solid orange;
 }
 
+.reset:disabled {
+    background-color: var(--Dark-grayish-cyan);
+    cursor: not-allowed;
+}
+
 /*  */
 @media(min-width:768px) {
     .container {
@@ -220,12 +225,12 @@ body {
     }
 
     .tip-container {
-        padding: 3rem;
+        padding: 3rem 2rem;
         gap: 0rem;
     }
 
     .tip-container-1 {
-        align-items: flex-start;
+        align-items: center;
     }
 
     .reset-container {

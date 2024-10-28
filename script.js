@@ -24,7 +24,7 @@ const resetBtn = () => {
     tipAmountPerson.textContent = "$0.00";
     zeroWarning.classList.add("none");
     tipPercent = 0;
-    document.querySelectorAll('.btn').forEach(btn => btn.classList.remove("clicked"));
+    document.querySelectorAll('.percent').forEach(btn => btn.classList.remove("clicked"));
 };
 
 const calculateTip = () => {
@@ -32,8 +32,10 @@ const calculateTip = () => {
         const tipTotal = (bill * tipPercent) / 100;
         const tipPerPerson = tipTotal / people;
         const totalPerPerson = (bill / people) + tipPerPerson;
-        tipAmount.textContent = `$${tipTotal.toFixed(2)}`;
+        tipAmount.textContent = `$${tipPerPerson.toFixed(2)}`;
         tipAmountPerson.textContent = `$${totalPerPerson.toFixed(2)}`;
+        reset.removeAttribute("disabled")
+        reset.classList.remove("reset:disabled")
     } else {
         tipAmount.textContent = "$0.00";
         tipAmountPerson.textContent = "$0.00";
