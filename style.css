@@ -1,0 +1,235 @@
+:root {
+    --Strong-cyan: hsl(172, 67%, 45%);
+
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --Dark-grayish-cyan: hsl(186, 14%, 43%);
+    --Grayish-cyan: hsl(184, 14%, 56%);
+    --Light-grayish-cyan: hsl(185, 41%, 84%);
+    --Very-light-grayish-cyan: hsl(180, 45%, 94%);
+    --White: hsl(0, 0%, 100%);
+
+    --Font-size: 24px
+}
+
+body {
+    background: var(--Light-grayish-cyan);
+    font-family: Space Mono, sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.heading {
+    color: var(--Very-dark-cyan);
+    font-weight: 600;
+    letter-spacing: 1rem;
+    line-height: 2.5rem;
+    margin: 2rem 0rem;
+    font-size: 1.5rem;
+}
+
+.bill-container {
+    background: var(--White);
+    width: 100%;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.sub-heading {
+    color: var(--Grayish-cyan);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: .2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-field {
+    padding: .5rem;
+    border: none;
+    width: 100%;
+    text-align: right;
+    margin-bottom: 2rem;
+    border-radius: .5rem;
+    color: var(--Very-dark-cyan);
+    font-weight: 600;
+    font-size: var(--Font-size);
+    cursor: pointer;
+}
+
+#bill-amount {
+    background-image: url(images/icon-dollar.svg);
+    background-repeat: no-repeat;
+    background-position: 1rem;
+    background-color: var(--Very-light-grayish-cyan);
+}
+
+.percent-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.percent {
+    background-color: var(--Very-dark-cyan);
+    border: none;
+    padding: .5rem;
+    color: var(--White);
+    font-weight: 600;
+    font-size: var(--Font-size);
+    border-radius: .3rem;
+    cursor: pointer;
+}
+
+#custom {
+    text-align: center;
+    font-weight: 600;
+    color: var(--Very-dark-cyan);
+    border: none;
+    border-radius: .3rem;
+    font-size: var(--Font-size);
+    background: var(--Very-light-grayish-cyan);
+    cursor: pointer;
+}
+
+#no-of-people {
+    background: url(images/icon-person.svg);
+    background-repeat: no-repeat;
+    background-position: 1rem;
+    background-color: var(--Very-light-grayish-cyan);
+}
+
+.zero {
+    color: orange;
+}
+
+.tip-container {
+    background-color: var(--Very-dark-cyan);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    font-weight: 600;
+    display: grid;
+    gap: 1rem;
+}
+
+.tip-container-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tip {
+    color: var(--White);
+}
+
+.per {
+    color: var(--Grayish-cyan);
+}
+
+.total-tip {
+    color: var(--Strong-cyan);
+    font-size: 2rem;
+}
+
+.tip-amount-person {
+    font-size: 2rem;
+    color: var(--Strong-cyan);
+}
+
+.reset {
+    width: 100%;
+    background-color: var(--Strong-cyan);
+    border: none;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--Very-dark-cyan);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.reset:hover {
+    background-color: var(--Light-grayish-cyan);
+
+}
+
+/*active states  */
+.input-field:focus {
+    border: none;
+    outline: 3px solid var(--Strong-cyan);
+}
+
+.clicked {
+    background-color: var(--Strong-cyan);
+}
+
+#custom:focus-visible {
+    outline: 3px solid var(--Strong-cyan);
+}
+
+.none {
+    display: none;
+}
+
+.warning {
+    outline: 3px solid orange;
+}
+
+/*  */
+@media(min-width:768px) {
+    .container {
+        max-width: 600px;
+        justify-content: center;
+    }
+
+    .bill-container {
+        border-radius: 1rem;
+        margin-bottom: 3rem;
+    }
+}
+
+@media(min-width:1024px) {
+    .container {
+        max-width: 900px;
+        justify-content: center;
+        min-height: 100vh;
+    }
+
+    .bill-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        border-radius: 1rem;
+    }
+
+    .percent-buttons {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .tip-container {
+        padding: 3rem;
+        gap: 0rem;
+    }
+
+    .tip-container-1 {
+        align-items: flex-start;
+    }
+
+    .reset-container {
+        display: flex;
+        align-items: flex-end;
+    }
+}
