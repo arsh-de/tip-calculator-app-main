@@ -23,19 +23,25 @@ const resetBtn = () => {
     tipAmount.textContent = "$0.00";
     tipAmountPerson.textContent = "$0.00";
     zeroWarning.classList.add("none");
-    tipPercent = 0;
     document.querySelectorAll('.percent').forEach(btn => btn.classList.remove("clicked"));
+    bill = 0;
+    people = 0;
+    tipPercent = 0;
+    reset.setAttribute("disabled", "true"); // Disable reset button after reset
 };
 
 const calculateTip = () => {
+
+    bill = 0;
+    people = 0;
+
     if (people > 0 && bill > 0 && tipPercent > 0) {
         const tipTotal = (bill * tipPercent) / 100;
         const tipPerPerson = tipTotal / people;
-        const totalPerPerson = (bill / people) + tipPerPerson;
+        const totalPerPerson = (bill + tipTotal) / people;
         tipAmount.textContent = `$${tipPerPerson.toFixed(2)}`;
         tipAmountPerson.textContent = `$${totalPerPerson.toFixed(2)}`;
-        reset.removeAttribute("disabled")
-        reset.classList.remove("reset:disabled")
+        reset.removeAttribute("disabled"); // Enable reset button when valid input
     } else {
         tipAmount.textContent = "$0.00";
         tipAmountPerson.textContent = "$0.00";
@@ -82,3 +88,4 @@ custom.addEventListener("input", () => {
 });
 
 reset.addEventListener("click", resetBtn);
+reset.setAttribute("disabled", "true"); // Disable reset button initially
