@@ -34,6 +34,7 @@ body {
     line-height: 2.5rem;
     margin-bottom: 4rem;
     font-size: 1.5rem;
+    margin-top: 1rem;
 }
 
 .bill-container {
@@ -140,11 +141,11 @@ body {
 
 .total-tip {
     color: var(--Strong-cyan);
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 .tip-amount-person {
-    font-size: 3rem;
+    font-size: 2rem;
     color: var(--Strong-cyan);
 }
 
@@ -196,18 +197,6 @@ body {
 /*  */
 @media(min-width:768px) {
     .container {
-        max-width: 600px;
-        justify-content: center;
-    }
-
-    .bill-container {
-        border-radius: 1rem;
-        margin-bottom: 3rem;
-    }
-}
-
-@media(min-width:1024px) {
-    .container {
         max-width: 900px;
         justify-content: center;
         min-height: 100vh;
@@ -222,6 +211,14 @@ body {
 
     .percent-buttons {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .total-tip {
+        font-size: 3rem;
+    }
+
+    .tip-amount-person {
+        font-size: 3rem;
     }
 
     .tip-container {

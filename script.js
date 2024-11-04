@@ -31,10 +31,6 @@ const resetBtn = () => {
 };
 
 const calculateTip = () => {
-
-    bill = 0;
-    people = 0;
-
     if (people > 0 && bill > 0 && tipPercent > 0) {
         const tipTotal = (bill * tipPercent) / 100;
         const tipPerPerson = tipTotal / people;
